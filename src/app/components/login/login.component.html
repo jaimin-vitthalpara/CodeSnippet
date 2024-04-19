@@ -1,0 +1,22 @@
+<h1>Login</h1>
+<div class="container">
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" [formControl]="email">
+            <small class="form-text text-muted" [hidden]="email.valid || email.untouched">Please, Enter Valid
+                Email</small>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" [formControl]="password">
+            <small class="form-text text-muted" [hidden]="password.valid || password.untouched">Password must
+                required</small>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" [disabled]="loginForm.invalid" (click)="login()"
+                class="btn btn-success">Login</button>
+            <button type="submit" (click)="reset()" class="btn btn-danger">Reset</button>
+        </div>
+    </form>
+</div>

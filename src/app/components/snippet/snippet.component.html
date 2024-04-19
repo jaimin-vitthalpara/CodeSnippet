@@ -1,0 +1,24 @@
+<h1>Add Code Snippet Here</h1>
+<div class="container">
+    <form [formGroup]="snippetForm">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" [formControl]="title">
+            <small class="form-text text-muted" [hidden]="title.valid || title.untouched">Please, Enter Valid
+                title</small>
+        </div>
+        <div class="form-group">
+            <!-- <label>Code</label>
+            <input type="text" class="form-control" [formControl]="code"> -->
+            <label for="exampleFormControlTextarea1">Code</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" [formControl]="code"></textarea>
+            <small class="form-text text-muted" [hidden]="code.valid || code.untouched">code must
+                required</small>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" [disabled]="snippetForm.invalid" (click)="save()"
+                class="btn btn-success">Save</button>
+            <button type="submit" (click)="reset()" class="btn btn-danger">Reset</button>
+        </div>
+    </form>
+</div>

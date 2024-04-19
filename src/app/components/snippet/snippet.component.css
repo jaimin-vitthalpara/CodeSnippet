@@ -1,0 +1,28 @@
+
+
+h1,h2{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 0 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    /* border: 3px solid rgb(105, 73, 158); */
+    width: 35%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+input {
+    width: 350px;
+    height: 40px;
+}
+
+.btn {
+    padding: 10px 30px;
+}

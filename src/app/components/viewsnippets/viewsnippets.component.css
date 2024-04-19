@@ -1,0 +1,24 @@
+/* div{
+    color: black;
+    margin: 60px auto 0 auto;
+} */
+
+div {
+    margin: 100px 20px;
+    padding: 10px;
+}
+
+h3{
+    color: #333;
+    margin-bottom: 10px;
+}
+
+pre{
+    white-space: pre-wrap;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    margin-left: 0 !important;
+}

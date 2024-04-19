@@ -1,0 +1,36 @@
+<h1>SignUp</h1>
+<div class="container">
+    <form #registerForm="ngForm">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" ngModel #fullname="ngModel" name="fullname" required>
+            <small class="form-text text-muted" [hidden]="fullname.untouched">Please, enter your full name</small>
+        </div>
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" ngModel
+                #email="ngModel" name="email" required>
+            <small class="form-text text-muted" [hidden]="email.valid || email.untouched">Please, Enter Valid
+                Email</small>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" minlength="6" ngModel #password="ngModel" name="password"
+                required>
+            <small class="form-text text-muted" [hidden]="password.valid || password.untouched">Password must
+                required</small>
+        </div>
+        <div class="form-group">
+            <label>Mobile No</label>
+            <input type="number" class="form-control" maxlength="10" ngModel #phone="ngModel" name="phone" required>
+            <small class="form-text text-muted" [hidden]="phone.valid || phone.untouched">Please, Enter Valid mobile
+                no</small>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" [disabled]="registerForm.invalid" (click)="register(registerForm)"
+                class="btn btn-success">Signup</button>
+            <button type="submit" (click)="reset(registerForm)" class="btn btn-danger">Reset</button>
+        </div>
+    </form>
+</div>
